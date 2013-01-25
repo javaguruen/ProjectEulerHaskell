@@ -9,6 +9,7 @@ isPrime n = length (faktors n) == 0
 faktors :: Int -> [Int]
 faktors n =  filter (\a -> mod n a == 0) [2..( myCeil (sqrt (fromIntegral  n)))]
 
+
 myCeil :: Double -> Int
 myCeil n = ceiling( n + 0.5)
 
