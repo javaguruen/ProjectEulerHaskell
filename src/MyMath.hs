@@ -16,3 +16,5 @@ myCeil n = ceiling( n + 0.5)
 sum :: [Int] -> Int
 sum [] = 0
 sum a = foldl (+) 0 a
+
+isEven n =  n `mod` 2 == 0
