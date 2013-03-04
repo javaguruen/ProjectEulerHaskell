@@ -1,4 +1,6 @@
 module MyMath where 
+import Data.Char
+
 
 isPrime :: Int -> Bool
 isPrime 1 = False
@@ -18,3 +20,9 @@ sum [] = 0
 sum a = foldl (+) 0 a
 
 isEven n =  n `mod` 2 == 0
+
+char2Int :: Char -> Int
+char2Int c = ord c - ord '0'
+
+tverrsum :: String ->  Int
+tverrsum n =  foldl (+) 0 ( map ( char2Int ) ( n ) )
