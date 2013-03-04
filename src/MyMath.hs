@@ -1,6 +1,6 @@
 module MyMath where 
 import Data.Char
-
+import Data.List
 
 isPrime :: Int -> Bool
 isPrime 1 = False
@@ -26,3 +26,8 @@ char2Int c = ord c - ord '0'
 
 tverrsum :: String ->  Int
 tverrsum n =  foldl (+) 0 ( map ( char2Int ) ( n ) )
+
+--factorial :: Int -> Int
+factorial 0 = 1
+factorial n = n * factorial(n-1)
+--factorial n = product [1..n]
